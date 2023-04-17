@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let formulario = document.getElementById('formul');
+            formulario.addEventListener('submit', function() {
+            formulario.reset();
+            });
+        });
+        </script>
+    <style>
+        *{
+            font-family:  'Asap', sans-serif;
+            font-weight: bold ;
+        }
+        
+        body{
+            background-color: #e5e5f7;
+            opacity: 0.8;
+            background-image:  radial-gradient(#2cb86b 0.5px, transparent 0.5px), radial-gradient(#0bb36d 0.5px, #3ab67e 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0,10px 10px;
+            display:flex;
+            min-height: 100vh;
+            
+        }
+        .title{
+            text-align: center;
+        }
+        .select_multiple{
+            border:1px solid #619ec1;
+            border-radius:3px;
+            background-color:#d6d6d6;
+            padding: 0 1em 0 0.2em;
+            margin: 0;
+            width: 150px;
+            
+            
+  }
+        .form{
+            background-color: #fff;
+            margin: auto;
+            width: 90%;
+            max-width: 500px;
+            padding:4.5em 3em;
+            border-radius: 5%;
+            line-height: 30px;
+        }
+        .input{
+            width:180px;
+            padding:3px 10px;
+            border:1px solid #c5c5c5;
+            border-radius:3px;
+            background-color:#d6d6d6;
+            margin:8px 0;
+            
+        }
+        
+        .enviar {
+            font-size:15px;
+            font-weight:bold;
+            align-items: center;
+            margin-left:160px;
+            
+            width:120px;
+            height:30px;
+            
+            border-radius:3px;
+            
+        };
+        
+        
+    </style>
+
+</head>
+<body>
+    <form class="form">
+    <div class="form_container">
+        <h1 class="title"> FORMULARIO </h1>
+        <div class="form_group">
+        <label for="nombre">Nombre: </label>
+        <input class="input"  type="text" placeholder="nombre" name="name"><br>
+        </div>
+        
+        <div class="form_group">
+        <label for="apellido">Apellidos: </label>
+        <input class="input"  type="text" placeholder="apellido" name="apellido"><br>
+        </div>
+
+        <div class="form_group">
+        <label for="fecha">Fecha de nacimiento: </label>
+        <input class="input" type="date" placeholder="Fecha de nacimiento" name="fecha"><br>
+        </div>
+
+        <div class="form_group">
+        <label for="ocupacion">Ocupacion: </label>
+        <input class="input" type="text" placeholder="ocupacion" name="ocupacion"><br>
+        </div>
+
+        <div class="form_group">
+        <label for="telefono">Telefono: </label>
+        <input class="input" type="tel" placeholder="telefono" name="telefono"><br>
+        </div>  
+
+        <div class="form_group">
+        <label for="email">Email:</label>
+        <input class="input" type="text" placeholder="email" name="email"><br>
+        </div>
+
+        <div class="form_group">
+        <label for="nacionalidad">Nacionalidad: </label>
+        <select class="input"  name="nacionalidad">
+            <option value="">Brasil</option>
+            <option value="">Peru</option>
+            <option value="">Argentina</option>
+        </select><br>
+        </div>
+
+        <div class="form_group">
+        <label for="nivel">Nivel de ingles :</label>
+        <input type="radio" name="nivel" value="Basico">Basico
+        <input type="radio" name="nivel" value="Intermedio">Intermedio
+        <input type="radio" name="nivel" value="Avanzado">Avanzado
+        <input type="radio" name="nivel" value="Fluido">Fluido
+        <br>
+        </div>
+
+        <div class="form_group">
+        <label for="lenguajes">Lenguajes de programacion: </label>
+        <select class="select_multiple" name="lenguajes" multiple  size=2>
+            <option value="C++">C++</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+        </select><br>
+        </div>    
+
+        <div class="form_group">
+        <label for="aptidud">Aptitudes: </label>
+        <input class="input" list="aptidudes" name="aptidud" placeholder="Selecciona o escribe" id="aptidud">
+        <datalist id="aptidudes" >
+            <option value="Honestidad">
+            <option value="Responsabilidad">
+            <option value="Entusiasmo">
+            <option value="Puntualidad">
+        </datalist><br>
+        </div>
+
+        <div class="form_group">
+        <label for="nivel">Habilidades: </label>
+        <input type="checkbox" name="habilidad" value="rapidez">Rapidez
+        <input type="checkbox" name="habilidad" value="creatividad">Creatividad
+        <input type="checkbox" name="habilidad" value="ingenio">Ingenio
+        <input type="checkbox" name="habilidad" value="intuitivo">Intuitivo
+        <br>
+        </div>    
+
+        <div class="form_group">
+        <label for="perfil">Perfil: </label><br>
+        <textarea id="perfil" rows="10" cols="70" name="perfil"></textarea><br>
+        </div>        
+        
+        <div class="button"></div>
+        <button class="enviar">Enviar</button>
+        </div>
+
+
+
+
+
+        
+
+    </div> 
+    </form>
+    
+</body>
+</html>
